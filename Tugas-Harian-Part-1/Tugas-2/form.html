@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Register Akun Baru!</h1>
+        <p><b>Isilah form di bawah ini</b></p>
+    </div>
+    
+    <div class="form">
+        <form method="post">
+        <p >First Name:</p>
+        <input type="text" name="firstname">
+        <p>Last Name:</p>
+        <input type="text" name="lastname">
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+        <p>Nationality:</p>
+        <select name="nationality">
+            <option value="indonesian">Indonesian</option>
+        </select>
+        <p>Sedang Fokus Belajar:</p>
+        <select name="materi">
+            <option value="reactjs">Reactjs</option>
+        </select>
+        <p>Language Spoken:</p>
+        <input type="checkbox" id="indonesian" name="language" value="Indonesian">
+        <label for="indonesian">Indonesian</label>
+        <input type="checkbox" id="english" name="language" value="English">
+        <label for="english">English</label>
+        <input type="checkbox" id="other" name="language" value="Other">
+        <label for="other">Other</label>
+        <p>Deskripsi Diri Saya:</p>
+        <textarea name="deskripsi"></textarea>
+        <br><br>
+        <input type="submit" name="register" value="Register">
+    </form>
+    </div>
+    
+</body>
+</html>
