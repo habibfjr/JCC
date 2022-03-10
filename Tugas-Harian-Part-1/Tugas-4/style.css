@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+/* Buatlah styling section top dibawah ini */
+
+.top{
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.top .icon{
+    margin-top: 30px;
+}
+
+.icon i{
+    padding: 15px;
+    font-size: 20px;
+}
+
+.top h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Buatlah styling section container dan card dibawah ini */
+
+.container{
+    place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.card{
+    background-color: white;
+    box-shadow:  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.description{
+    padding: 20px;
+}
+
+.description p{
+    margin-top: 20px;
+}
+
+img{
+    width: 100%;
+}
+
+
+/* Aturlah breakpoint dibawah ini menggunakan media queries agar responsive */
+@media only screen and (max-width: 480px) {
+    .container{
+        padding: 0px;
+        grid-template-columns: 1fr;
+    }
+    .card{
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .container{
+        padding: 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container{
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
