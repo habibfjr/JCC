@@ -50,10 +50,10 @@
     let sentences= 'wah javascript itu keren sekali'; 
 
     let firstWords= sentences.substring(0, 3); 
-    let secondWords= sentences.substring(4, 14); // do your own! 
-    let thirdWords= sentences.substring(15, 18); // do your own! 
-    let fourthWords= sentences.substring(19, 24); // do your own! 
-    let fifthWords= sentences.substring(25, 31); // do your own! 
+    let secondWords= sentences.substring(4, 14);  
+    let thirdWords= sentences.substring(15, 18);  
+    let fourthWords= sentences.substring(19, 24); 
+    let fifthWords= sentences.substring(25, 31); 
 
     console.log('Kata Pertama: ' + firstWords); 
     console.log('Kata Kedua: ' + secondWords); 
@@ -68,12 +68,12 @@
 
     var exampleFirstWord = sentence[0] ; 
     var exampleSecondWord = sentence[2] + sentence[3]  ; 
-    var thirdWord = sentence[5] + sentence[6] + sentence[7] + sentence[8]+ sentence[9]; // lakukan sendiri, wajib mengikuti seperti contoh diatas 
-    var fourthWord = sentence[11] + sentence[12]; // lakukan sendiri , wajib mengikuti seperti contoh diatas
-    var fifthWord = sentence[14] + sentence[15]; // lakukan sendiri , wajib mengikuti seperti contoh diatas
-    var sixthWord = sentence[17] + sentence[18] + sentence[19] + sentence[20]+ sentence[21]; // lakukan sendiri , wajib mengikuti seperti contoh diatas
-    var seventhWord = sentence[23] + sentence[24]; // lakukan sendiri , wajib mengikuti seperti contoh diatas
-    var eighthWord = sentence[26] + sentence[27] + sentence[28] + sentence[29]+ sentence[30] + sentence[31] + sentence[32] + sentence[33]+ sentence[34]; // lakukan sendiri , wajib mengikuti seperti contoh diatas
+    var thirdWord = sentence[5] + sentence[6] + sentence[7] + sentence[8]+ sentence[9]; 
+    var fourthWord = sentence[11] + sentence[12]; 
+    var fifthWord = sentence[14] + sentence[15]; 
+    var sixthWord = sentence[17] + sentence[18] + sentence[19] + sentence[20]+ sentence[21]; 
+    var seventhWord = sentence[23] + sentence[24]; 
+    var eighthWord = sentence[26] + sentence[27] + sentence[28] + sentence[29]+ sentence[30] + sentence[31] + sentence[32] + sentence[33]+ sentence[34]; 
 
     console.log('First Word: ' + exampleFirstWord); 
     console.log('Second Word: ' + exampleSecondWord); 
@@ -88,7 +88,7 @@
 // Soal 6
 {
     let txt = "I can eat bananas all day";
-    let hasil = txt.slice(10, 17); //lakukan pengambilan kalimat di variable ini
+    let hasil = txt.slice(10, 17);
 
     console.log(hasil)
 }
