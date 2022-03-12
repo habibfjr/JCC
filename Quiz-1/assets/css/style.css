@@ -1,0 +1,218 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins";
+    font-size: 22px;
+}
+
+/* Buatlah styling setiap section dibawah ini */
+.container {
+    width: 780px;
+    margin: 0 auto;
+    }
+
+.container_hero{
+    border-radius: 8px;
+    background-color: #146356;
+    color: white;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+.container_hero p{
+    font-size: 14px;
+    text-align: end;
+}
+
+.container_bottom{
+    margin: 30px;
+    
+}
+
+.container_bottom p{
+    font-size: 14px;
+}
+
+.container_bottom button{
+    font-size: 14px;
+}
+
+.container_support p{
+    text-align: center;
+}
+
+.container_support .logo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin: 30px;
+}
+
+
+.container_features_title h1{
+    color: black;
+    display: flex;
+    border-bottom: 3px solid black;
+    width: 40%;
+    margin: 30px;
+    padding-top: 30px;
+}
+
+.container_features{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 30px;
+    text-align: center;
+}
+
+.container_features-card h3{
+    padding: 30px;
+}
+
+.container_features-card p{
+    font-size: 12px;
+}
+
+.container_pricing_title h1{
+    display: flex;
+    width: 20%;
+    border-bottom: 3px solid black;
+    color: black;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+}
+
+.container_pricing{
+    background-color: #1f2e31;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 25px;
+    width: max-content;
+    
+}
+
+.container_pricing-card{
+    background-color: white;
+    place-items: center;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width:170px;
+    text-align: center;
+}
+
+.container_pricing-card h1{
+    color: black;
+    font-size: 14px;
+}
+
+.container_pricing-card small{
+    font-size: 9px;
+}
+
+.container_pricing-card ul li{
+    font-size: 9px;
+    text-align: justify;
+}
+
+
+/* Aturlah breakpoint dibawah ini menggunakan media queries agar responsive dibawah sini*/
+
+@media only screen and (max-width: 480px){
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+        }
+        .container_pricing{
+            background-color: #1f2e31;
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+        }
+        .container_pricing_title h1{
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .container_features{
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 30px;
+            gap: 30px;
+            text-align: center;
+        }
+        .container_features_title h1{
+            text-align: center;
+            width: 85%;
+        }
+        .container_support{
+            width: 100%;
+            text-align: center;
+        }
+        .container_support .logo{
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 40px;
+        }
+        .container_bottom{
+            width: 100%;
+            text-align: center;
+        }
+        
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+        }
+        .container_pricing{
+            background-color: #1f2e31;
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+        }
+        .container_pricing_title h1{
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+        }    
+        .container_features{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 30px;
+            gap: 30px;
+            text-align: center;
+        }
+        .container_features_title h1{
+            text-align: center;
+            width: 85%;
+        }
+        .container_support{
+            width: 100%;
+            text-align: center;
+        }
+        .container_support .logo{
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 40px;
+        }
+        .container_bottom{
+            width: 100%;
+            text-align: center;
+        }
+       
+}
+
