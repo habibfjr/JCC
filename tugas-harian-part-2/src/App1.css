@@ -51,10 +51,6 @@ p{
     margin-top: 5px;
 }
 
-.button:hover input{
-    background-color:cornflowerblue;
-}
-
 .button:active input{
     background-color: red;
 }
