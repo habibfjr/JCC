@@ -1,35 +1,12 @@
 import React from 'react';
-import logo from './assets/img/logo.png';
-import './App1.css';
+import Tugas10 from './Tugas-10/tugas10';
+import Tugas11 from './Tugas-11/tugas11';
 
 const App=()=>{
-
-  const ToDoList=(props)=>{
-    return(
-      <div className='toDoList'>
-        <input type={'checkbox'}/>{props.text}
-        <hr/>
-      </div>   
-    )
-  }
-
   return(
-    <div className='card'>
-      <img src={logo} />
-      <h1>THINGS TO DO</h1>
-      <p>During Bootcamp in Jabarcodingcamp</p>
-      <hr/>
-
-      <div className='containerList'></div>
-        <ToDoList text={'Belajar GIT & CLI'}/>
-        <ToDoList text={'Belajar HTML & CSS'}/>
-        <ToDoList text={'Belajar Javascript'}/>
-        <ToDoList text={'Belajar ReactJS Dasar'}/>
-        <ToDoList text={'Belajar ReactJS Advance'}/>
-    
-      <div className='button'>
-        <input type={'submit'} name={'send'} value={'Send'} />
-      </div>
+    <div>
+    {/* <Tugas10/> */}
+    <Tugas11/>
     </div>
   )
 }

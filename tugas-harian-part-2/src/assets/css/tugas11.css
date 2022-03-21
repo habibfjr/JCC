@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    padding: 30px;
+}
+ 
+  .tabel td, .tabel th {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  
+  .tabel th {
+    padding: 20x;
+    background-color: white;
+    text-align: center;
+  }
+
+  .tabel {
+    width: 50%;
+    margin:0 auto;
+    }
+
+    .tabel button{
+        margin: 0.5px;
+    }
+
+  .form{
+    border: 1px solid #ccc;
+    width: 50%;
+    margin: 0 auto;
+    
+    padding: 30px;
+                  
+  }
+
+  .form label{
+      font-weight: bold;
+      
+  }
+
+  .form input{
+      float:right ;
+  }
