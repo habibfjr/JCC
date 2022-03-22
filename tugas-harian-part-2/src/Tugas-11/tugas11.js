@@ -85,7 +85,7 @@ const Tugas11=()=>{
             
             <h1>Form Daftar Harga Buah</h1>
             <div className='form'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="POST">
                 <label>Nama:</label>         
                 <input type="text" name='nama' value={inputBuah.nama} onChange={handleChange} required/><br/><br/>
                 <label>Harga Total:</label>
