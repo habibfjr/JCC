@@ -59,7 +59,7 @@ const Tugas12=()=>{
                 console.log(err)
             })
         }
-        setInput({name:'',course:'' ,score:''})
+        setInput({name:'',course:'' ,score:0})
         setCurrentId(-1)
       }
 
@@ -119,10 +119,10 @@ const Tugas12=()=>{
                 <tbody>
                     {dataMahasiswa !== null &&(
                         <>
-                        {dataMahasiswa.map((res,id)=>{
+                        {dataMahasiswa.map((res,index)=>{
                         return (
-                            <tr key={id}>
-                                <td>{res.id+1}</td>
+                            <tr key={index}>
+                                <td>{index+1}</td>
                                 <td>{res.name}</td>
                                 <td>{res.course}</td>
                                 <td>{res.score}</td>
