@@ -41,7 +41,7 @@ const Tugas12=()=>{
             axios.post(`https://backendexample.sanbercloud.com/api/student-scores`, {name,score,course})
             .then((res)=>{
                 let data = res.data
-                setDataMahasiswa([...dataMahasiswa,{name:data.name,course:data.course ,score:data.score}])
+                setDataMahasiswa([...dataMahasiswa,{name,score,course}])
                 setFetchStatus(true)
             })
             .catch((err)=>{
