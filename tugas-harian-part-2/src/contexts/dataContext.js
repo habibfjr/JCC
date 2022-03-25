@@ -28,6 +28,21 @@ export const DataProvider = props => {
 
 const handleEdit = (event)=>{
   let dataId = parseInt(event.target.value)
+  axios.get(`https://backendexample.sanbercloud.com/api/student-scores/${dataId}`)
+  .then((res)=>{
+      let data=res.data
+      setInput({name:data.name,course:data.course ,score:data.score})
+      setCurrentId(data.id)
+      setFetchStatus(true)
+      
+  })
+  .catch((err)=>{
+      console.log(err)
+  })
+}
+
+const handleEdit1 = (event)=>{
+  let dataId = parseInt(event.target.value)
   history.push(`/tugas14/edit/${dataId}`)
   axios.get(`https://backendexample.sanbercloud.com/api/student-scores/${dataId}`)
   .then((res)=>{
@@ -91,7 +106,7 @@ const handleChange = (event) => {
 
     let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus}
 
-    let handleFunction = {handleDelete,handleEdit,handleChange,handleSubmit,handleIndexScore}
+    let handleFunction = {handleDelete,handleEdit,handleEdit1,handleChange,handleSubmit,handleIndexScore}
 
   return (
     <DataContext.Provider value={{

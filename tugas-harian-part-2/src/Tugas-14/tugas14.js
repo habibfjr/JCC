@@ -9,7 +9,7 @@ const Tugas14 = () =>{
 
   const {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus} = state
 
-  const {handleDelete,handleEdit,handleChange,handleSubmit,handleIndexScore} = handleFunction
+  const {handleDelete,handleEdit1,handleChange,handleSubmit,handleIndexScore} = handleFunction
 
   useEffect(()=>{
 
@@ -55,7 +55,7 @@ const Tugas14 = () =>{
                                 <td>{res.course}</td>
                                 <td>{res.score}</td>
                                 <td>{handleIndexScore(res.score)}</td>
-                                <td> <button onClick={handleEdit} value={res.id}>Edit</button>
+                                <td> <button onClick={handleEdit1} value={res.id}>Edit</button>
                                      <button onClick={handleDelete} value={res.id}>Delete</button>
                                 </td>
                             </tr>
