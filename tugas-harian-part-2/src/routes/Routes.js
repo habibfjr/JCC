@@ -37,7 +37,9 @@ const Routes = () => {
         </Route>
 
         <Route exact path="/tugas14">
+          <DataProvider>
           <Tugas14/>
+          </DataProvider>
         </Route>
 
         <Route exact path="/tugas14/create">
@@ -45,7 +47,9 @@ const Routes = () => {
         </Route>
 
         <Route exact path="/tugas14/edit/:slug">
+        <DataProvider>
           <Tugas14Form/>
+        </DataProvider>
         </Route>
       </Switch>
 
