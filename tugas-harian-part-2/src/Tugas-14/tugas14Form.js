@@ -10,7 +10,7 @@ const Tugas14Form = () => {
 
     const {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus} = state
 
-    const {handleDelete,handleEdit,handleChange,handleSubmit,handleIndexScore} = handleFunction
+    const {handleDelete,handleEdit,handleChange,handleSubmit1,handleIndexScore} = handleFunction
 
     let {slug}= useParams
 
@@ -38,7 +38,7 @@ const Tugas14Form = () => {
             <h1>Form Nilai Mahasiswa</h1>
             </div>
             <div className='form'>
-            <form onSubmit={handleSubmit} method="POST">
+            <form onSubmit={handleSubmit1} method="POST">
                 <label>Nama:</label>
                 <input type="text" name='name' value={input.name} onChange={handleChange} required /><br /><br />
                 <label>Mata Kuliah:</label>

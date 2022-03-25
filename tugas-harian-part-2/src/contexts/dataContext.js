@@ -81,6 +81,36 @@ const handleChange = (event) => {
         .then((res)=>{
             let data = res.data
             setDataMahasiswa([...dataMahasiswa,{name,score,course}])
+            setFetchStatus(true)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }else{
+        axios.put(`https://backendexample.sanbercloud.com/api/student-scores/${currentId}`,{name,score,course})
+        .then((res)=>{
+            let editData = dataMahasiswa.find(x=>x.id === currentId)
+            editData.id = input
+            setDataMahasiswa([...dataMahasiswa])
+            setFetchStatus(true)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+    setInput({name:'',course:'' ,score:0})
+    setCurrentId(-1)
+  }
+
+  const handleSubmit1 = (event) => {
+    event.preventDefault()
+    
+    let{name,course,score} = input
+    if(currentId === -1){
+        axios.post(`https://backendexample.sanbercloud.com/api/student-scores`, {name,score,course})
+        .then((res)=>{
+            let data = res.data
+            setDataMahasiswa([...dataMahasiswa,{name,score,course}])
             history.push('/tugas14')
             setFetchStatus(true)
         })
@@ -106,7 +136,7 @@ const handleChange = (event) => {
 
     let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus}
 
-    let handleFunction = {handleDelete,handleEdit,handleEdit1,handleChange,handleSubmit,handleIndexScore}
+    let handleFunction = {handleDelete,handleEdit,handleEdit1,handleChange,handleSubmit,handleSubmit1,handleIndexScore}
 
   return (
     <DataContext.Provider value={{
