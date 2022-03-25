@@ -103,8 +103,8 @@ const Tugas12=()=>{
 
     return (
         <div>
-            <h1>Daftar Nilai Mahasiswa</h1>
             <div className='tabel'>
+            <h1>Daftar Nilai Mahasiswa</h1>
             <table>
                 <thead>
                     <tr>
@@ -139,7 +139,9 @@ const Tugas12=()=>{
             </table>
             </div>
             
+            <div className='headerForm'>
             <h1>Form Nilai Mahasiswa</h1>
+            </div>
             <div className='form'>
             <form onSubmit={handleSubmit} method="POST">
                 <label>Nama:</label>         

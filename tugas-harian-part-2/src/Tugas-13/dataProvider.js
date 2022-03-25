@@ -1,5 +1,5 @@
 import React from "react"
-import {DataProvider} from "./dataContext.js"
+import {DataProvider} from "../contexts/dataContext.js"
 import DataTable from "./dataTable"
 import DataForm from "./dataForm"
 

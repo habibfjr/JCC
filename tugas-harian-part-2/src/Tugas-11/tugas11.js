@@ -51,8 +51,8 @@ const Tugas11=()=>{
 
     return (
         <div>
-            <h1>Daftar Harga Buah</h1>
             <div className='tabel'>
+            <h1>Daftar Harga Buah</h1>
             <table>
                 <thead>
                     <tr>
@@ -83,7 +83,9 @@ const Tugas11=()=>{
             </table>
             </div>
             
+            <div className='headerForm'>
             <h1>Form Daftar Harga Buah</h1>
+            </div>
             <div className='form'>
             <form onSubmit={handleSubmit} method="POST">
                 <label>Nama:</label>         

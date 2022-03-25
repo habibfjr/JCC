@@ -1,8 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 import {DataContext} from "../contexts/dataContext";
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import ButtonSwitch from "../components/buttonSwitch";
 
-const DataTable = () =>{
+const Tugas14 = () =>{
   const {state, handleFunction} = useContext(DataContext)
 
   const {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus} = state
@@ -28,7 +30,9 @@ const DataTable = () =>{
 
   return(
         <div>
+            <ButtonSwitch/>
             <div className='tabel'>
+            <Link to='/tugas14/create'><button style={{marginTop:'50px',marginLeft:'300px'}}>Add Data</button></Link>
             <h1>Daftar Nilai Mahasiswa</h1>
             <table>
                 <thead>
@@ -68,4 +72,4 @@ const DataTable = () =>{
 
 }
 
-export default DataTable
+export default Tugas14

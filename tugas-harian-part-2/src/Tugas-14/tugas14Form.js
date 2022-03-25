@@ -1,8 +1,10 @@
 import React, { useContext, useState, useEffect } from "react"
 import { DataContext } from "../contexts/dataContext"
 import axios from 'axios';
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const DataForm = () => {
+const Tugas14Form = () => {
 
     const {state, handleFunction} = useContext(DataContext)
 
@@ -10,22 +12,25 @@ const DataForm = () => {
 
     const {handleDelete,handleEdit,handleChange,handleSubmit,handleIndexScore} = handleFunction
 
+    let {slug}= useParams
+
     useEffect(()=>{
 
-        let fetchData = async () => {
-            let {data} = await axios.get(`https://backendexample.sanbercloud.com/api/student-scores`)
-            let result = data.map((res)=>{
-                let {course, id, name, score} = res
-                return {course,id,name,score}
+        if (slug !== undefined){
+            axios.get(`https://backendexample.sanbercloud.com/api/student-scores/${slug}`)
+            .then((res)=>{
+            let data=res.data
+            setInput({name:data.name,course:data.course,score:data.score})
+            setCurrentId(data.id)
+
             })
-            setDataMahasiswa([...result])
-          }
-          if (fetchStatus){
-            fetchData()
-            setFetchStatus(false)
-          }
-          
-    },[fetchStatus,setFetchStatus, dataMahasiswa,setDataMahasiswa])
+            } 
+
+            return ()=>{
+            setInput({name:'',course:'',score:0})
+            setCurrentId(-1)
+            }
+            },[])
 
     return(
         <>
@@ -42,9 +47,10 @@ const DataForm = () => {
                 <input type="number" name='score' value={input.score} onChange={handleChange} min={0} max={100} required /><br /><br />
                 <input type="submit" value="Submit" />
             </form>
+            <Link to="/tugas14">Back</Link>
         </div>
         </>
     )
 }
 
-export default DataForm
+export default Tugas14Form
