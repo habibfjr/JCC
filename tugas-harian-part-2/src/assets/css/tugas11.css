@@ -54,10 +54,14 @@
 
   li{
     margin-right: 0px;
-    padding: 15px;
-    border: 1px solid white;
+    padding: 5px;
+    
   }
-  ul:active li{
+ .nav-light:hover  ul li{
+    background-color:beige;
+  }
+
+  .nav-dark:hover  ul li{
     background-color: white;
   }
 

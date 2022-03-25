@@ -23,21 +23,27 @@ const Routes = () => {
         <Route exact path="/">
           <Tugas10 />
         </Route>
+
         <Route exact path="/tugas11">
           <Tugas11 />
         </Route>
+
         <Route exact path="/tugas12">
           <Tugas12 />
         </Route>
+
         <Route exact path="/dataContext">
           <Data />
         </Route>
+
         <Route exact path="/tugas14">
           <Tugas14/>
         </Route>
+
         <Route exact path="/tugas14/create">
           <Tugas14Form/>
         </Route>
+
         <Route exact path="/tugas14/edit/:slug">
           <Tugas14Form/>
         </Route>

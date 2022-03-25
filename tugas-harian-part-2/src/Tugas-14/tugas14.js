@@ -32,7 +32,6 @@ const Tugas14 = () =>{
         <div>
             <ButtonSwitch/>
             <div className='tabel'>
-            <Link to='/tugas14/create'><button style={{marginTop:'50px',marginLeft:'300px'}}>Add Data</button></Link>
             <h1>Daftar Nilai Mahasiswa</h1>
             <table>
                 <thead>
@@ -66,6 +65,7 @@ const Tugas14 = () =>{
                     )}
                 </tbody>
             </table>
+            <Link to='/tugas14/create'><button style={{marginTop:'30px',marginLeft:'300px'}}>Add Data</button></Link>
             </div>
             </div>  
   )
