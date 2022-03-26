@@ -8,10 +8,10 @@ import Routes from './routes/Routes';
 const App=()=>{
   return(
     <div>
-    {/* <Tugas10/> */}
-    {/* <Tugas11/> */}
-    {/* <Tugas12/> */}
-    {/* <Tugas13/> */}
+    {/* // <Tugas10/> */}
+    {/* // <Tugas11/> */}
+    {/* // <Tugas12/> */}
+    {/* // <Tugas13/> */}
     <Routes/>
     </div>
   )

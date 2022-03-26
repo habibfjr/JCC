@@ -9,6 +9,8 @@ import Data from "../Tugas-13/dataProvider";
 import Tugas14 from "../Tugas-14/tugas14";
 import Tugas14Form from "../Tugas-14/tugas14Form";
 import { SwitchColorContextProvider } from "../contexts/switchColorContext";
+import Tugas15 from "../Tugas-15/tugas15";
+import Tugas15Form from "../Tugas-15/tugas15Form";
 
 
 const Routes = () => {
@@ -49,6 +51,22 @@ const Routes = () => {
         <Route exact path="/tugas14/edit/:slug">
         <DataProvider>
           <Tugas14Form/>
+        </DataProvider>
+        </Route>
+
+        <Route exact path="/tugas15">
+          <DataProvider>
+          <Tugas15/>
+          </DataProvider>
+        </Route>
+
+        <Route exact path="/tugas15/create">
+          <Tugas15Form/>
+        </Route>
+
+        <Route exact path="/tugas15/edit/:slug">
+        <DataProvider>
+          <Tugas15Form/>
         </DataProvider>
         </Route>
       </Switch>

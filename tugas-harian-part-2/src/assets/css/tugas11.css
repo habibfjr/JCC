@@ -58,11 +58,11 @@
     
   }
  .nav-light:hover  ul li{
-    background-color:beige;
+    background-color:white;
   }
 
   .nav-dark:hover  ul li{
-    background-color: white;
+    background-color: darkslategrey;
   }
 
   .nav-light{
