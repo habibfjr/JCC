@@ -12,6 +12,10 @@ export const DataProvider = props => {
 })
   const [currentId, setCurrentId] = useState(-1)
   const [fetchStatus,setFetchStatus] = useState(true)
+  const [popDel,setPopDel]=useState(false)
+  const [popSub,setPopSub]=useState(false)
+  const [popEdsub,setPopEdsub]=useState(false)
+
 
   const handleDelete = (event)=>{
     let dataId = parseInt(event.target.value)
@@ -20,6 +24,7 @@ export const DataProvider = props => {
       let newDataMahasiswa = dataMahasiswa.filter(x=> {return x.id !== dataId})
       setDataMahasiswa(newDataMahasiswa)
       setFetchStatus(true)
+      setPopDel(true)
   })
   .catch((err)=>{
       console.log(err)
@@ -161,6 +166,7 @@ const handleChange = (event) => {
             setDataMahasiswa([...dataMahasiswa,{name,score,course}])
             history.push('/tugas15')
             setFetchStatus(true)
+            setPopSub(true)
         })
         .catch((err)=>{
             console.log(err)
@@ -173,6 +179,7 @@ const handleChange = (event) => {
             setDataMahasiswa([...dataMahasiswa])
             history.push('/tugas15')
             setFetchStatus(true)
+            setPopEdsub(true)
         })
         .catch((err)=>{
             console.log(err)
@@ -182,7 +189,7 @@ const handleChange = (event) => {
     setCurrentId(-1)
   }
 
-    let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus}
+    let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus,popDel,setPopDel,popSub,setPopSub,popEdsub,setPopEdsub}
 
     let handleFunction = {handleDelete,handleEdit,handleEdit1,handleEdit2,handleChange,handleSubmit,handleSubmit1,handleSubmit2,handleIndexScore}
 

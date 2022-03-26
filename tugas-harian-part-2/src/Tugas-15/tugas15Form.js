@@ -8,7 +8,7 @@ const Tugas15Form = () => {
 
     const {state, handleFunction} = useContext(DataContext)
 
-    const {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus} = state
+    const {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus,popSub,setPopSub, popEdsub,setPopEdsub} = state
 
     const {handleDelete,handleEdit,handleChange,handleSubmit2,handleIndexScore} = handleFunction
 
@@ -24,8 +24,7 @@ const Tugas15Form = () => {
             setCurrentId(data.id)
 
             })
-            }
-        
+            }     
 
             return ()=>{
             setInput({name:'',course:'',score:0})
