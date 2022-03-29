@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
+import Cookies from 'js-cookie'
 
 export const DataContext = createContext();
 
@@ -15,7 +16,35 @@ export const DataProvider = props => {
   const [popDel,setPopDel]=useState(false)
   const [popSub,setPopSub]=useState(false)
   const [popEdsub,setPopEdsub]=useState(false)
+  const [input1,setInput1]=useState({name:'',email:'',password:''})
+  const [input2,setInput2]=useState({email:'',password:''})
 
+    const handleLogin=(event)=>{
+        event.preventDefault()
+        let {email,password} = input2
+        axios.post(`https://backendexample.sanbersy.com/api/user-login`, {email,password})
+        .then((res)=>{
+            console.log(res)
+            let {token} = res.data
+            Cookies.set('token',token)
+            window.location='/'
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+
+    const handleRegister=(event)=>{
+        event.preventDefault()
+        let{name,email,password}=input1
+        axios.post(`https://backendexample.sanbersy.com/api/register`, {name,email,password})
+        .then((res)=>{
+            window.location='/login'
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
 
   const handleDelete = (event)=>{
     let dataId = parseInt(event.target.value)
@@ -189,9 +218,9 @@ const handleChange = (event) => {
     setCurrentId(-1)
   }
 
-    let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus,popDel,setPopDel,popSub,setPopSub,popEdsub,setPopEdsub}
+    let state = {dataMahasiswa,setDataMahasiswa,input,setInput,currentId,setCurrentId,fetchStatus,setFetchStatus,popDel,setPopDel,popSub,setPopSub,popEdsub,setPopEdsub,input1,setInput1,input2,setInput2}
 
-    let handleFunction = {handleDelete,handleEdit,handleEdit1,handleEdit2,handleChange,handleSubmit,handleSubmit1,handleSubmit2,handleIndexScore}
+    let handleFunction = {handleDelete,handleEdit,handleEdit1,handleEdit2,handleChange,handleSubmit,handleSubmit1,handleSubmit2,handleIndexScore,handleRegister,handleLogin}
 
   return (
     <DataContext.Provider value={{

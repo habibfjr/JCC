@@ -11,6 +11,8 @@ import Tugas14Form from "../Tugas-14/tugas14Form";
 import { SwitchColorContextProvider } from "../contexts/switchColorContext";
 import Tugas15 from "../Tugas-15/tugas15";
 import Tugas15Form from "../Tugas-15/tugas15Form";
+import Register from "../Auth/register";
+import Login from "../Auth/login";
 
 
 const Routes = () => {
@@ -69,6 +71,15 @@ const Routes = () => {
           <Tugas15Form/>
         </DataProvider>
         </Route>
+
+        <Route exact path="/register">
+        <Register/>
+        </Route>
+
+        <Route exact path="/login">
+        <Login/>
+        </Route>
+
       </Switch>
 
       </SwitchColorContextProvider>
