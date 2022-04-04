@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = () =>{
     let history = useHistory()
     let dataUser = JSON.parse(Cookies.get('user'))
-    // const[drop,setDrop]=useState(false)
+    const[drop,setDrop]=useState(false)
 
     return(
         <>
@@ -21,7 +21,9 @@ const Header = () =>{
 
 
                                 <div className="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
-                                    <button type="button" className="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
+                                    <button onClick={()=>{
+                                        setDrop(!drop)
+                                    }} type="button" className="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                                     <span className="sr-only">Open user menu</span>
                                     <img alt="profil" src={dataUser.image_url} className="mx-auto object-cover rounded-full h-10 w-10 " />
                                     <h5 className="font-medium py-2 px-2">Hi, {dataUser.name}!</h5>

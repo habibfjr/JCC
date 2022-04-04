@@ -81,24 +81,26 @@ export const DataProvider = props =>{
         let {title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max} = input
         
         if (currentId === -1){
-            axios.post(`https://dev-example.sanbercloud.com/api/job-vacancy`, 
-            {headers: {"Authorization" : "Bearer "+ Cookies.get('token')}} ,{title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max})
+            axios.post(`https://dev-example.sanbercloud.com/api/job-vacancy` ,{title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max},  
+            {headers: {"Authorization" : "Bearer "+ Cookies.get('token')}})
             .then((res)=>{
-                let data = res.data.data
-                setData([...data, {title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max}])
+                let dataSub = res.data.data
+                setData([...data, input])
                 setFetchStatus(true)
+                history.push('/dashboard/list-job-vacancy')
             })
             .catch((err)=>{
                 alert(err)
             })
         }else{
-            axios.put(`https://dev-example.sanbercloud.com/api/job-vacancy/${currentId}`, 
-            {headers: {"Authorization" : "Bearer "+ Cookies.get('token')}},{title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max})
+            axios.put(`https://dev-example.sanbercloud.com/api/job-vacancy/${currentId}`,{title, job_description, job_qualification, job_type, job_tenure, job_status, company_name, company_image_url, company_city, salary_min, salary_max}, 
+            {headers: {"Authorization" : "Bearer "+ Cookies.get('token')}})
             .then((res)=>{
                 let editData = data.find(x=>x.id === currentId)
                 editData.id = input
                 setData([...data])
                 setFetchStatus(true)
+                history.push('/dashboard/list-job-vacancy')
             })
             .catch((err)=>{
                 alert(err)
